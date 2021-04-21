@@ -1,0 +1,32 @@
+.form-page {
+  background-color: rgba(62, 69, 163);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.styling-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 50vw;
+  height: 50vh;
+  background-color: rgba(41, 45, 105);
+  margin: 10%;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 730px) {
+
+}
+
+@media only screen and (max-width: 576px) {
+
+}
