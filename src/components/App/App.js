@@ -1,9 +1,15 @@
 import logo from '../../logo.svg';
 import './App.css';
+import React from 'react';
+import StartScreen from '../StartScreen/StartScreen.js'
+import {Route, Switch} from 'react-router-dom';
+
 
 function App() {
   return (
-    <p>test</p>
+    <Switch className='app'>
+      <Route exact path="/" component={ StartScreen }/>
+    </Switch>
   );
 }
 

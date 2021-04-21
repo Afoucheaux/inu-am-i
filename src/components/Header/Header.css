@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-content: center;
+  background-color: rgba(84, 69, 163, .9);
+  height:11vh;
+  width: 100vw;
+}
+
+.header-container {
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.amie-logo {
+  margin-left: 5%;
+  width: 10vh;
+  height: 10vh;
+  border: solid;
+  border-radius: 50%;
+  border-color: rgba(201, 201, 201);
+}
+
+.site-name {
+  margin: 0;
+  font-size: 2.5em;
+  color: rgba(247, 248, 250);
+}
+
+.tag-line {
+  margin: 0;
+  font-size: .8em;
+  color: rgba(201, 201, 201);
+}
+
+@media only screen and (max-width: 730px) {
+
+}
+
+@media only screen and (max-width: 576px) {
+
+}
