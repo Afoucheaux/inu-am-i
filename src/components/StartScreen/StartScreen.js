@@ -5,7 +5,7 @@ import './StartScreen.css'
 
 
 function StartScreen () {
-  const [userName, setUserName] = useState('Default User');
+  const [userName, setUserName] = useState('Name');
   const [numberOfShiba, setNumberOfShiba] = useState(5);
 
   const handleNameChange = (event) => {
@@ -17,7 +17,7 @@ function StartScreen () {
   }
 
   const clearInputs = () => {
-    setUserName('Default-User');
+    setUserName('User');
     setNumberOfShiba(5);
   }
 
@@ -27,14 +27,17 @@ function StartScreen () {
       <article className='styling-box'>
         <form className='start-info'>
          <input
+            className='set-name'
+            data-cy='set-name'
             type='text'
             placeholder='user name'
             name='userName'
             value={userName}
             onChange={event => handleNameChange(event)}
-            required
          />
          <input
+           className='set-num'
+            data-cy='set-num'
             type='number'
             min='1'
             max='15'
@@ -42,9 +45,8 @@ function StartScreen () {
             name='numberOfShiba'
             value={numberOfShiba}
             onChange={event => handleNumChange(event)}
-            required
          />
-         <Link onClick={() => clearInputs()} className="start-button" data-cy="start-button" to={`/game/${userName}/${numberOfShiba}`}>Start Game</Link>
+         <Link onClick={() => clearInputs()} className="start-button" data-cy="start-button" to={`/game/${userName}/${numberOfShiba}`}>Start Matching</Link>
         </form>
       </article>
     </section>
