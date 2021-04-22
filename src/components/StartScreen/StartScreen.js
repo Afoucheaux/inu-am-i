@@ -17,7 +17,7 @@ function StartScreen () {
   }
 
   const clearInputs = () => {
-    setUserName('Default User');
+    setUserName('Default-User');
     setNumberOfShiba(5);
   }
 
