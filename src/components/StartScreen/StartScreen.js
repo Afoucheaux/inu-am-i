@@ -1,11 +1,12 @@
-import React, {useState } from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header.js';
 import './StartScreen.css'
 
+
 function StartScreen () {
-  const [userName, setUserName] = useState('');
-  const [numberOfShiba, setNumberOfShiba] = useState(0);
+  const [userName, setUserName] = useState('Default User');
+  const [numberOfShiba, setNumberOfShiba] = useState(5);
 
   const handleNameChange = (event) => {
     setUserName(event.target.value);
@@ -13,6 +14,11 @@ function StartScreen () {
 
   const handleNumChange = (event) => {
     setNumberOfShiba(event.target.value);
+  }
+
+  const clearInputs = () => {
+    setUserName('Default User');
+    setNumberOfShiba(5);
   }
 
   return (
@@ -26,6 +32,7 @@ function StartScreen () {
             name='userName'
             value={userName}
             onChange={event => handleNameChange(event)}
+            required
          />
          <input
             type='number'
@@ -35,13 +42,13 @@ function StartScreen () {
             name='numberOfShiba'
             value={numberOfShiba}
             onChange={event => handleNumChange(event)}
+            required
          />
-         <button>Submit</button>
+         <Link onClick={() => clearInputs()} className="start-button" data-cy="start-button" to={`/game/${userName}/${numberOfShiba}`}>Start Game</Link>
         </form>
       </article>
     </section>
   )
-
 }
 
 

@@ -22,6 +22,9 @@
   margin: 10%;
   border-radius: 20px;
 }
+.start-button {
+  text-decoration: none;
+}
 
 @media only screen and (max-width: 730px) {
 
