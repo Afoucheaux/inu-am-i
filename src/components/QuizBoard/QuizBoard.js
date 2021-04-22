@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './QuizBoard.css';
 import Header from '../Header/Header.js';
-import { getGameImages } from '../../apiCalls.js'
+import { getGameImages } from '../../apiCalls.js';
 
 const QuizBoard = ( {name, number} ) => {
 

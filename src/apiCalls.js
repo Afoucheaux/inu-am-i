@@ -1,5 +1,3 @@
-// const shibaURL = 'https://pure-hollows-05817.herokuapp.com/http://shibe.online/api/shibes?count=10&urls=true&httpsUrls=true';
-
 const shibaBaseURL = 'https://pure-hollows-05817.herokuapp.com/http://shibe.online/api/shibes';
 const catBaseUrl = 'https://pure-hollows-05817.herokuapp.com/http://shibe.online/api/cats';
 
