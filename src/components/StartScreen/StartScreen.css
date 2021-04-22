@@ -21,6 +21,8 @@
   background-color: rgba(41, 45, 105);
   margin: 10%;
   border-radius: 20px;
+  box-shadow: 5px 5px 7px 2px rgba(23, 28, 97, .8),
+-2px -2px 5px 1px rgba(25, 30, 97, .4);
 }
 .start-button {
   font-size: 2em;
