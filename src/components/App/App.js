@@ -1,9 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import QuizBoard from '../QuizBoard/QuizBoard';
+import StartScreen from '../StartScreen/StartScreen.js';
+import {Route, Switch} from 'react-router-dom';
 
 function App() {
+
   return (
-    <p>test</p>
+    <Switch className='app'>
+      <Route exact path='/' component={ StartScreen }/>
+      <Route exact path='/game/:name/:number' render={({ match }) => <QuizBoard name={match.params.name} number={match.params.number}/>}/>
+    </Switch>
   );
 }
 

@@ -1,25 +1,11 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('seedAndVisitDefault', () => {
+  cy.intercept('https://pure-hollows-05817.herokuapp.com/http://shibe.online/api/shibes?count=5&urls=true&httpsUrls=true', {fixture:'shibas.js'})
+  cy.intercept('https://pure-hollows-05817.herokuapp.com/http://shibe.online/api/cats?count=10&urls=true&httpsUrls=true', {fixture:'cats.js'})
+  cy.visit('http://localhost:3000')
+})
+
+Cypress.Commands.add('seedAndVisitInput', () => {
+  cy.intercept('https://pure-hollows-05817.herokuapp.com/http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true', {fixture:'shibasInput.js'})
+  cy.intercept('https://pure-hollows-05817.herokuapp.com/http://shibe.online/api/cats?count=2&urls=true&httpsUrls=true', {fixture:'catsInput.js'})
+  cy.visit('http://localhost:3000')
+})

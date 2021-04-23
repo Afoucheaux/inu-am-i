@@ -1,0 +1,48 @@
+.page-styling {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgba(62, 69, 163);
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.directions {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game-board {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 79vh;
+}
+
+.get-results {
+  color: rgba(247, 248, 250);
+  font-size: 1.5em;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 20px;
+  background-color: rgba(41, 45, 105);
+  box-shadow: 5px 5px 7px 2px rgba(23, 28, 97, .8),
+-2px -2px 5px 1px rgba(25, 30, 97, .4);
+}
+
+.inst {
+  color: rgba(247, 248, 250);
+}
+
+@media only screen and (max-width: 730px) {
+
+}
+
+@media only screen and (max-width: 576px) {
+
+}
