@@ -13,8 +13,17 @@ const QuizBoard = ( {name, number} ) => {
     .then(data => buildGameState(data))
   }, [])
 
-  const test = () => {
-    console.log('test')
+  const updateCard = (event) => {
+    let newGameInfo = gameInfo
+    if (gameInfo[event.target.parentElement.id].checked === false) {
+      event.target.classList.add('grey-out');
+      newGameInfo[event.target.parentElement.id].checked = true
+      setGameInfo(newGameInfo)
+    } else {
+      event.target.classList.remove('grey-out');
+      newGameInfo[event.target.parentElement.id].checked = false
+      setGameInfo(newGameInfo)
+    }
   }
 
   const gameCardsDisplay = gameInfo.map(info => {
@@ -23,7 +32,7 @@ const QuizBoard = ( {name, number} ) => {
       key={info.id}
       id={info.id}
       image={info.image}
-      handleFunc={test}
+      updateCard={updateCard}
       />
     )
   })
@@ -32,7 +41,7 @@ const QuizBoard = ( {name, number} ) => {
     const shibas = gameCardinfo(data[0], true);
     const cats = gameCardinfo(data[1], false);
     const animals = shuffle([...shibas, ...cats]);
-    setGameInfo(animals)
+    setGameInfo(animals);
   }
 
   const shuffle = (items) => {
@@ -54,8 +63,11 @@ const QuizBoard = ( {name, number} ) => {
   return (
     <section className='page-styling' data-cy='page-styling'>
       <Header />
-      <article className='game-board' data-cy'game-board'>
-        <h2>Click On all the images of Shiba's and then submit to see how you did!'</h2>
+      <article className='directions' data-cy='directions'>
+        <h2 className='inst' data-cy='inst'>Click On all the images of Shiba's and then submit to see how you did!'</h2>
+        <button className='get-results' data-cy='get-results'>submit</button>
+      </article>
+      <article className='game-board' data-cy='game-board'>
         {gameInfo && gameCardsDisplay}
       </article>
     </section>
