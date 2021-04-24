@@ -44,6 +44,11 @@ function PlayerView({ name, round }) {
     return gameCardsDisplay
   }
 
+  const handleRound = (id) => {
+    const newRoundDisplay = allRounds[id]
+    setDisplayRound(newRoundDisplay);
+  }
+
   const correctDisplay = checkedGameCards(correctCards);
   const incorrectDiaplsy = checkedGameCards(incorrectCards);
 
@@ -62,7 +67,7 @@ function PlayerView({ name, round }) {
           </article>
         </div>
         <div className='right-styling-box'>
-          {allRounds && <RecordBox rounds={allRounds}/>}
+          {allRounds && <RecordBox rounds={allRounds} handleRound={handleRound}/>}
         </div>
         </section>
     </main>
