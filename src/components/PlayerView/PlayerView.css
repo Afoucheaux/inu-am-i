@@ -1,47 +1,49 @@
 .page-layout {
   display: flex;
-  justify-content: space-around;
   background-color: rgba(62, 69, 163);
   width: 100vw;
   min-height: 100vh;
-  margin: 0;
-}
-
-.left-styling-box {
-  display: flex;
-  width: 65vw;
-  flex-direction: column;
-}
-
-.right-styling-box {
-  width: 40vw;
-}
-
-.correct {
-  display: flex;
-  width: 65vw;
-  flex-direction: row;
-}
-
-.incorrect {
-  display: flex;
-  width: 65vw;
-  flex-direction: row;
+  margin: 0
 }
 
 .button-box {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(62, 69, 163);
+  width: 100vw;
+  height: 6vh;
 }
 
-.start-fresh {
-  text-align: center;
-  background: rgba(41, 45, 105);
-  color: rgba(247, 248, 250);
-  font-size: 1.5em;
-  width: 10vw;
-  height: 5vh;
+.left-styling-box {
+  display: flex;
+  flex-direction: column;
+  width: 72vw;
+}
+
+.correct {
+  width: 72vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  width: 72vw;
+}
+
+.incorrect {
+  width: 72vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rounds-box {
+  margin: 6vh 0 6vh 0;
+  background-color: rgba(84, 69, 163);
+  width: 28vw;
   border-radius: 20px;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 7px 2px rgba(23, 28, 97, .8),
+-2px -2px 5px 1px rgba(25, 30, 97, .4);
 }

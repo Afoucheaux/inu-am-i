@@ -42,7 +42,7 @@ function PlayerView({ name }) {
     setIncorrectCards(incorrect)
   }, [displayRound])
 
-  const checkedGameCards = (cardPile) => {
+  const checkedGameCards = cardPile => {
     let gameCardsDisplay = cardPile.map(info => {
       return (
         <AnswerCard
@@ -54,6 +54,19 @@ function PlayerView({ name }) {
     return gameCardsDisplay
   }
 
+  const roundRecords = rounds => {
+    let roundsToDisplay = rounds.map((info, i) => {
+      return (
+        <RecordCard
+          key={i}
+          id={i}
+          handleRound={handleRound}
+        />
+      )
+    })
+    return roundsToDisplay
+  }
+
   const handleRound = (id) => {
     const newRoundDisplay = allRounds[id]
     setDisplayRound(newRoundDisplay);
@@ -61,6 +74,7 @@ function PlayerView({ name }) {
 
   const correctDisplay = checkedGameCards(correctCards);
   const incorrectDiaplsy = checkedGameCards(incorrectCards);
+  const roundsToDisplay = roundRecords(allRounds);
 
   return (
     <main>
@@ -68,21 +82,25 @@ function PlayerView({ name }) {
       <article className='button-box'>
         <Link className='start-fresh' data-cy='start-fresh' to={{pathname:`/game/${name}/5`, state:{allRounds}}}>Start Fresh</Link>
       </article>
-        <section className='page-layout'>
+      <section className='page-layout'>
         <div className='left-styling-box'>
           <article className='correct'>
-            <p>Got Right!</p>
+            <div className='title'>
+              <p>Got Right!</p>
+            </div>
             {correctCards && correctDisplay}
           </article>
           <article className='incorrect'>
+          <div className='title'>
             <p>Opps!</p>
+          </div>
             {incorrectCards && incorrectDiaplsy}
           </article>
         </div>
-        <div className='right-styling-box'>
-          {allRounds && <RecordBox rounds={allRounds} handleRound={handleRound}/>}
-        </div>
-        </section>
+        <article className='rounds-box'>
+          {allRounds && roundsToDisplay}
+        </article>
+      </section>
     </main>
   )
 }
