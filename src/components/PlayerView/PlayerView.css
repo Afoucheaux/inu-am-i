@@ -1,0 +1,47 @@
+.page-layout {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(62, 69, 163);
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.left-styling-box {
+  display: flex;
+  width: 65vw;
+  flex-direction: column;
+}
+
+.right-styling-box {
+  width: 40vw;
+}
+
+.correct {
+  display: flex;
+  width: 65vw;
+  flex-direction: row;
+}
+
+.incorrect {
+  display: flex;
+  width: 65vw;
+  flex-direction: row;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-fresh {
+  text-align: center;
+  background: rgba(41, 45, 105);
+  color: rgba(247, 248, 250);
+  font-size: 1.5em;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 20px;
+  text-decoration: none;
+}

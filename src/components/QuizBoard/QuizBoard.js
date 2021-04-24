@@ -1,30 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import './QuizBoard.css';
 import Header from '../Header/Header.js';
 import { getGameImages } from '../../apiCalls.js';
 import QuizCard from '../QuizCard/QuizCard.js';
 
-const QuizBoard = ( {name, number, updateRound} ) => {
-
+const QuizBoard = ( {name, number } ) => {
+  const location = useLocation();
+  const [allRounds, setAllRounds] = useState([]);
   const [gameInfo, setGameInfo] = useState([]);
 
   useEffect(() => {
     getGameImages(number)
     .then(data => buildGameState(data))
-  }, [])
+  }, []);
 
   useEffect(() => {
-    updateRound(gameInfo)
-  }, [gameInfo])
+    if (location.state === undefined) {
+      return
+    } else {
+      setAllRounds(location.state.allRounds)
+    }
+  });
 
   const updateCard = (event) => {
-    let newGameInfo = gameInfo
     if (gameInfo[event.target.parentElement.id].checked === false) {
+      let newGameInfo = gameInfo;
       event.target.classList.add('grey-out');
       newGameInfo[event.target.parentElement.id].checked = true;
       setGameInfo(newGameInfo);
     } else {
+      let newGameInfo = gameInfo;
       event.target.classList.remove('grey-out');
       newGameInfo[event.target.parentElement.id].checked = false;
       setGameInfo(newGameInfo);
@@ -70,7 +76,7 @@ const QuizBoard = ( {name, number, updateRound} ) => {
       <Header />
       <article className='directions' data-cy='directions'>
         <h2 className='inst' data-cy='inst'>Click On all the images of Shibas and then submit to see how you did!</h2>
-        <Link className='get-results' data-cy='get-results' to={`/user/${name}`}>submit</Link>
+        <Link className='get-results' data-cy='get-results' to={{pathname:`/user/${name}`, state:{gameInfo, allRounds}}}>submit</Link>
       </article>
       <article className='game-board' data-cy='game-board'>
         {gameInfo && gameCardsDisplay}

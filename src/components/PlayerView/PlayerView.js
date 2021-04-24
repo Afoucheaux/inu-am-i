@@ -4,18 +4,28 @@ import Header from '../Header/Header.js';
 import RecordCard from '../RecordCard/RecordCard.js';
 import AnswerCard from '../AnswerCard/AnswerCard.js';
 import RecordBox from '../RecordBox/RecordBox.js';
+import { useLocation, Link } from 'react-router-dom';
 
-function PlayerView({ name, round }) {
-
+function PlayerView({ name }) {
+  const location = useLocation();
   const [displayRound, setDisplayRound] = useState([]);
   const [allRounds, setAllRounds] = useState([]);
   const [correctCards, setCorrectCards] = useState([]);
   const [incorrectCards, setIncorrectCards] = useState([]);
 
   useEffect(() => {
+    const round = location.state.gameInfo;
     setDisplayRound(round)
-    const all = allRounds
-    setAllRounds([...all, round])
+  }, [])
+
+  useEffect(() => {
+    const round = location.state.gameInfo;
+    if(location.state.allRounds === undefined) {
+      setAllRounds([round])
+    } else {
+      const previousRounds = location.state.allRounds
+      setAllRounds([...previousRounds, round])
+    }
   }, [])
 
   useEffect(() => {
@@ -55,6 +65,9 @@ function PlayerView({ name, round }) {
   return (
     <main>
       <Header />
+      <article className='button-box'>
+        <Link className='start-fresh' data-cy='start-fresh' to={{pathname:`/game/${name}/5`, state:{allRounds}}}>Start Fresh</Link>
+      </article>
         <section className='page-layout'>
         <div className='left-styling-box'>
           <article className='correct'>

@@ -13,9 +13,9 @@
 }
 
 .card-image {
-  width: 18vw;
-  height: 22vh;
   margin: 0;
+  width: 15vw;
+  height: 20vh;
   border-radius: 20px;
   object-fit: cover;
 }
