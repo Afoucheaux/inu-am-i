@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './QuizBoard.css';
 import Header from '../Header/Header.js';
 import { getGameImages } from '../../apiCalls.js';
 import QuizCard from '../QuizCard/QuizCard.js';
 
-const QuizBoard = ( {name, number} ) => {
+const QuizBoard = ( {name, number, updateRound} ) => {
 
   const [gameInfo, setGameInfo] = useState([]);
 
@@ -13,16 +14,20 @@ const QuizBoard = ( {name, number} ) => {
     .then(data => buildGameState(data))
   }, [])
 
+  useEffect(() => {
+    updateRound(gameInfo)
+  }, [gameInfo])
+
   const updateCard = (event) => {
     let newGameInfo = gameInfo
     if (gameInfo[event.target.parentElement.id].checked === false) {
       event.target.classList.add('grey-out');
-      newGameInfo[event.target.parentElement.id].checked = true
-      setGameInfo(newGameInfo)
+      newGameInfo[event.target.parentElement.id].checked = true;
+      setGameInfo(newGameInfo);
     } else {
       event.target.classList.remove('grey-out');
-      newGameInfo[event.target.parentElement.id].checked = false
-      setGameInfo(newGameInfo)
+      newGameInfo[event.target.parentElement.id].checked = false;
+      setGameInfo(newGameInfo);
     }
   }
 
@@ -64,8 +69,8 @@ const QuizBoard = ( {name, number} ) => {
     <section className='page-styling' data-cy='page-styling'>
       <Header />
       <article className='directions' data-cy='directions'>
-        <h2 className='inst' data-cy='inst'>Click On all the images of Shiba's and then submit to see how you did!'</h2>
-        <button className='get-results' data-cy='get-results'>submit</button>
+        <h2 className='inst' data-cy='inst'>Click On all the images of Shibas and then submit to see how you did!</h2>
+        <Link className='get-results' data-cy='get-results' to={`/user/${name}`}>submit</Link>
       </article>
       <article className='game-board' data-cy='game-board'>
         {gameInfo && gameCardsDisplay}
@@ -73,6 +78,5 @@ const QuizBoard = ( {name, number} ) => {
     </section>
   )
 }
-
 
 export default QuizBoard;
