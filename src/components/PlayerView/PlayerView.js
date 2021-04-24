@@ -3,7 +3,6 @@ import './PlayerView.css';
 import Header from '../Header/Header.js';
 import RecordCard from '../RecordCard/RecordCard.js';
 import AnswerCard from '../AnswerCard/AnswerCard.js';
-import RecordBox from '../RecordBox/RecordBox.js';
 import { useLocation, Link } from 'react-router-dom';
 
 function PlayerView({ name }) {
