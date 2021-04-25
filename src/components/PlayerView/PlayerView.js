@@ -85,13 +85,13 @@ function PlayerView({ name }) {
         <div className='left-styling-box'>
           <article className='correct'>
             <div className='title'>
-              <p>Got Right!</p>
+              <p className='section-header'>Got Right!</p>
             </div>
             {correctCards && correctDisplay}
           </article>
           <article className='incorrect'>
           <div className='title'>
-            <p>Opps!</p>
+            <p className='section-header'>Opps!</p>
           </div>
             {incorrectCards && incorrectDiaplsy}
           </article>

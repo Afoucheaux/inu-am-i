@@ -43,6 +43,7 @@ const QuizBoard = ( {name, number } ) => {
       key={info.id}
       id={info.id}
       image={info.image}
+      type={info.shiba}
       updateCard={updateCard}
       />
     )
