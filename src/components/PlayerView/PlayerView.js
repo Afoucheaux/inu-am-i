@@ -86,7 +86,7 @@ function PlayerView({ name }) {
         <div className='left-styling-box' data-cy='left'>
           <article className='correct'>
             <div className='title' data-cy='title-correct'>
-              <p className='section-header' data-cy='got'>Got Right!</p>
+              <p className='section-header' data-cy='got'>{`Got ${ Math.round((correctCards.length / displayRound.length) * 100)}% Right!`}</p>
             </div>
             {correctCards && correctDisplay}
           </article>

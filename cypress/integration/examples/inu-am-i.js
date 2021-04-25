@@ -1,5 +1,11 @@
 context('inu-am-i', () => {
 
+  it('Should have a loading message', () => {
+    cy.visit('http://localhost:3000')
+    .get('[data-cy=start-button]').click()
+    .get('[data-cy=loading]').contains('Loading....')
+  })
+
   it('Should have a start screen with a default state that if the start link that gets you to the game board', () => {
     cy.seedAndVisitDefault()
     .get('[data-cy=header-box]').should('exist')
@@ -60,7 +66,7 @@ context('inu-am-i', () => {
     .get('[data-cy=button-box]').should('exist')
     .get('[data-cy=start-fresh]').contains('Start Fresh')
     .get('[data-cy=left]').should('exist')
-    .get('[data-cy=got]').contains('Got Right!')
+    .get('[data-cy=got]').contains('Got 67% Right!')
     .get('[data-cy=opps]').contains('Opps!')
     .get('[data-cy=answer-card]').should('have.length', '3')
     .get('[data-cy=right]').should('exist')
