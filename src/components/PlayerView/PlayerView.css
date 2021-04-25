@@ -69,6 +69,11 @@
   color: rgba(247, 248, 250);
 }
 
+.player-rounds {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgba(247, 248, 250);
+}
 
 @media only screen and (max-width: 730px) {
 

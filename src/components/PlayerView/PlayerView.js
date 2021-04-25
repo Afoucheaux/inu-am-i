@@ -79,25 +79,26 @@ function PlayerView({ name }) {
   return (
     <main>
       <Header />
-      <article className='button-box'>
+      <article className='button-box' data-cy='button-box'>
         <Link className='start-fresh' data-cy='start-fresh' to={{pathname:`/game/${name}/5`, state:{allRounds}}}>Start Fresh</Link>
       </article>
       <section className='page-layout'>
-        <div className='left-styling-box'>
+        <div className='left-styling-box' data-cy='left'>
           <article className='correct'>
-            <div className='title'>
-              <p className='section-header'>Got Right!</p>
+            <div className='title' data-cy='title-correct'>
+              <p className='section-header' data-cy='got'>Got Right!</p>
             </div>
             {correctCards && correctDisplay}
           </article>
           <article className='incorrect'>
-          <div className='title'>
-            <p className='section-header'>Opps!</p>
+          <div className='title' data-cy='title-incorrect'>
+            <p className='section-header' data-cy='opps'>Opps!</p>
           </div>
             {incorrectCards && incorrectDiaplsy}
           </article>
         </div>
-        <article className='rounds-box'>
+        <article className='rounds-box' data-cy='right'>
+          <p className='player-rounds' data-cy='player-rounds'>{`${name}'s Page`}</p>
           {allRounds && roundsToDisplay}
         </article>
       </section>

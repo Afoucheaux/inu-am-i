@@ -10,10 +10,12 @@ const QuizBoard = ( {name, number } ) => {
   const location = useLocation();
   const [allRounds, setAllRounds] = useState([]);
   const [gameInfo, setGameInfo] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     getGameImages(number)
     .then(data => buildGameState(data))
+    .catch(err => handleError(err))
   }, []);
 
   useEffect(() => {
@@ -23,6 +25,12 @@ const QuizBoard = ( {name, number } ) => {
       setAllRounds(location.state.allRounds)
     }
   });
+
+  const handleError = (err) => {
+    console.log(err)
+    const error = err
+    setError(error);
+  }
 
   const updateCard = (event) => {
     if (gameInfo[event.target.parentElement.id].checked === false) {
@@ -76,8 +84,10 @@ const QuizBoard = ( {name, number } ) => {
   return (
     <section className='page-styling' data-cy='page-styling'>
       <Header />
+        {error && <h1 data-cy='error-message'>There was an issue please refreash and try again.</h1>}
+        {!gameInfo.length && <h1 data-cy='loading'>Loading....</h1>}
       <article className='directions' data-cy='directions'>
-        <h2 className='inst' data-cy='inst'>Click On all the images of Shibas and then submit to see how you did!</h2>
+        <h2 className='inst' data-cy='inst'>{`${name} click on all the images of Shibas and then submit to see how you did!`}</h2>
         <Link className='get-results' data-cy='get-results' to={{pathname:`/user/${name}`, state:{gameInfo, allRounds}}}>submit</Link>
       </article>
       <article className='game-board' data-cy='game-board'>
