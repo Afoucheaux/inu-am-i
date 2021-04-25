@@ -48,6 +48,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   box-shadow: 5px 5px 7px 2px rgba(23, 28, 97, .8),
 -2px -2px 5px 1px rgba(25, 30, 97, .4);
 }
@@ -75,10 +76,21 @@
   color: rgba(247, 248, 250);
 }
 
-@media only screen and (max-width: 730px) {
-
-}
-
 @media only screen and (max-width: 576px) {
 
+  .section-header {
+    font-size: 1em;
+  }
+
+  .left-styling-box {
+    width: 60vw;
+  }
+
+  .rounds-box {
+    width: 40vw;
+  }
+
+  .start-fresh {
+    font-size: 1.25em;
+  }
 }

@@ -23,7 +23,7 @@
 }
 
 .site-name {
-  margin: 0;
+  margin: .75vh;
   font-size: 2.5em;
   color: rgba(247, 248, 250);
 }
@@ -37,8 +37,26 @@
 
 @media only screen and (max-width: 730px) {
 
+  .site-name {
+    margin: .5vh;
+    font-size: 1.75em;
+  }
+
+  .tag-line {
+    font-size: .7em;
+  }
+
 }
 
 @media only screen and (max-width: 576px) {
+
+  .site-name {
+    margin: .5vh;
+    font-size: 1.5em;
+  }
+
+  .tag-line {
+    font-size: .6em;
+  }
 
 }
