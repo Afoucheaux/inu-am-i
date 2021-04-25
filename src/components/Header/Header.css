@@ -14,9 +14,9 @@
 }
 
 .amie-logo {
-  margin-left: 5%;
-  width: 10vh;
-  height: 10vh;
+  margin-left: 5vw;
+  width: 11vh;
+  height: 11vh;
   border: solid;
   border-radius: 50%;
   border-color: rgba(201, 201, 201);
@@ -33,6 +33,7 @@
   font-size: .8em;
   color: rgba(201, 201, 201);
 }
+
 
 @media only screen and (max-width: 730px) {
 

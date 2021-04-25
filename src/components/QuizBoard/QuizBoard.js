@@ -1,28 +1,48 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import './QuizBoard.css';
 import Header from '../Header/Header.js';
 import { getGameImages } from '../../apiCalls.js';
 import QuizCard from '../QuizCard/QuizCard.js';
+import PropTypes from 'prop-types';
 
-const QuizBoard = ( {name, number} ) => {
-
+const QuizBoard = ( {name, number } ) => {
+  const location = useLocation();
+  const [allRounds, setAllRounds] = useState([]);
   const [gameInfo, setGameInfo] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     getGameImages(number)
     .then(data => buildGameState(data))
-  }, [])
+    .catch(err => handleError(err))
+  }, []);
+
+  useEffect(() => {
+    if (location.state === undefined) {
+      return
+    } else {
+      setAllRounds(location.state.allRounds)
+    }
+  });
+
+  const handleError = (err) => {
+    console.log(err)
+    const error = err
+    setError(error);
+  }
 
   const updateCard = (event) => {
-    let newGameInfo = gameInfo
     if (gameInfo[event.target.parentElement.id].checked === false) {
+      let newGameInfo = gameInfo;
       event.target.classList.add('grey-out');
-      newGameInfo[event.target.parentElement.id].checked = true
-      setGameInfo(newGameInfo)
+      newGameInfo[event.target.parentElement.id].checked = true;
+      setGameInfo(newGameInfo);
     } else {
+      let newGameInfo = gameInfo;
       event.target.classList.remove('grey-out');
-      newGameInfo[event.target.parentElement.id].checked = false
-      setGameInfo(newGameInfo)
+      newGameInfo[event.target.parentElement.id].checked = false;
+      setGameInfo(newGameInfo);
     }
   }
 
@@ -32,6 +52,7 @@ const QuizBoard = ( {name, number} ) => {
       key={info.id}
       id={info.id}
       image={info.image}
+      type={info.shiba}
       updateCard={updateCard}
       />
     )
@@ -63,9 +84,11 @@ const QuizBoard = ( {name, number} ) => {
   return (
     <section className='page-styling' data-cy='page-styling'>
       <Header />
+        {error && <h1 data-cy='error-message'>There was an issue, please refreash and try again.</h1>}
+        {!gameInfo.length && !error && <h1 data-cy='loading'>Loading....</h1>}
       <article className='directions' data-cy='directions'>
-        <h2 className='inst' data-cy='inst'>Click On all the images of Shiba's and then submit to see how you did!'</h2>
-        <button className='get-results' data-cy='get-results'>submit</button>
+        <h2 className='inst' data-cy='inst'>{`${name} click on all the images of Shibas and then submit to see how you did!`}</h2>
+        <Link className='get-results' data-cy='get-results' to={{pathname:`/user/${name}`, state:{gameInfo, allRounds}}}>submit</Link>
       </article>
       <article className='game-board' data-cy='game-board'>
         {gameInfo && gameCardsDisplay}
@@ -74,5 +97,9 @@ const QuizBoard = ( {name, number} ) => {
   )
 }
 
-
 export default QuizBoard;
+
+QuizBoard.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string
+}

@@ -12,16 +12,12 @@
 -3px -3px 5px 1px rgba(23, 28, 97, .8);
 }
 
-.card-image {
+.answer-image {
   margin: 0;
-  width: 18vw;
-  height: 22vh;
+  width: 15vw;
+  height: 20vh;
   border-radius: 20px;
   object-fit: cover;
-}
-
-.grey-out {
-  opacity: .2;
 }
 
 @media only screen and (max-width: 730px) {

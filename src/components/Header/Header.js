@@ -1,5 +1,6 @@
 import './Header.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header () {
   return (
@@ -12,7 +13,7 @@ function Header () {
           <h1 className='site-name' data-cy='site-name'>Inu-Am-I!</h1>
         </>
         <>
-          <p className='tag-line' data-cy='tag-line'>I site dedicated helping Shiba owner know if they really own cat.</p>
+          <p className='tag-line' data-cy='tag-line'>A site dedicated helping Shiba owner know if they really own a cat.</p>
         </>
       </article>
     </section>

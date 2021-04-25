@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header.js';
-import './StartScreen.css'
+import './StartScreen.css';
 
 
 function StartScreen () {
