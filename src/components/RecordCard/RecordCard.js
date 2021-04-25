@@ -1,5 +1,6 @@
 import React from 'react';
 import './RecordCard.css';
+import PropTypes from 'prop-types';
 
 function RecordCard({ id, handleRound }) {
   return (
@@ -11,3 +12,8 @@ function RecordCard({ id, handleRound }) {
 }
 
 export default RecordCard;
+
+RecordCard.propTypes = {
+  id: PropTypes.number,
+  handleRound: PropTypes.func
+}

@@ -33,7 +33,17 @@ context('inu-am-i', () => {
     .get('[data-cy=inst]').should('exist')
     .get('[data-cy=get-results]').should('exist')
     .get('[data-cy=game-board]').should('exist')
-    .get("[data-cy=card]").should("be.visible").should("have.length", 3)
+    .get('[data-cy=card]').should('be.visible').should('have.length', 3)
+  })
+
+  it('Should be able to toggle cards on and off and sumit a complete game going to the user screen', () => {
+    cy.seedAndVisitInput()
+    .get('[data-cy=set-num]').type('1').clear()
+    .get('[data-cy=set-num]').type('1').should('have.value', '1')
+    .get('[data-cy=start-button]').click()
+    .get('[data-cy=card]').first().click()
+    .get('[data-cy=card]').first().should('have.class', 'grey-out')
+
   })
 
 })

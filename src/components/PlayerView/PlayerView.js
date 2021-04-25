@@ -4,6 +4,7 @@ import Header from '../Header/Header.js';
 import RecordCard from '../RecordCard/RecordCard.js';
 import AnswerCard from '../AnswerCard/AnswerCard.js';
 import { useLocation, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function PlayerView({ name }) {
   const location = useLocation();
@@ -105,3 +106,7 @@ function PlayerView({ name }) {
 }
 
 export default PlayerView;
+
+PlayerView.propTypes = {
+  name: PropTypes.string
+}

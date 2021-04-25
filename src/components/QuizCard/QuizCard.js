@@ -1,5 +1,6 @@
 import React from 'react';
 import './QuizCard.css';
+import PropTypes from 'prop-types';
 
 function QuizCard( props ) {
   return (
@@ -10,3 +11,8 @@ function QuizCard( props ) {
 }
 
 export default QuizCard
+
+QuizCard.propTypes = {
+  image: PropTypes.string,
+  id: PropTypes.number
+}

@@ -4,6 +4,7 @@ import './QuizBoard.css';
 import Header from '../Header/Header.js';
 import { getGameImages } from '../../apiCalls.js';
 import QuizCard from '../QuizCard/QuizCard.js';
+import PropTypes from 'prop-types';
 
 const QuizBoard = ( {name, number } ) => {
   const location = useLocation();
@@ -87,3 +88,8 @@ const QuizBoard = ( {name, number } ) => {
 }
 
 export default QuizBoard;
+
+QuizBoard.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string
+}
