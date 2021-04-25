@@ -6,6 +6,30 @@ context('inu-am-i', () => {
     .get('[data-cy=loading]').contains('Loading....')
   })
 
+  it("Should display an error message for a 500 server status", () => {
+    cy.intercept(
+      {
+        method: "GET",
+        url: 'https://pure-hollows-05817.herokuapp.com/http://shibe.online/api/shibes?count=5&urls=true&httpsUrls=true'
+      },{
+        statusCode: 500,
+        message: "Something went wrong"
+      }
+    )
+    cy.intercept(
+      {
+        method: "GET",
+        url: 'https://pure-hollows-05817.herokuapp.com/http://shibe.online/api/cats?count=10&urls=true&httpsUrls=true'
+      },{
+        statusCode: 500,
+        message: "Something went wrong"
+      }
+    )
+    cy.visit('http://localhost:3000')
+    .get('[data-cy=start-button]').click()
+    .get('[data-cy=error-message]').contains('There was an issue, please refreash and try again.')
+  })
+
   it('Should have a start screen with a default state that if the start link that gets you to the game board', () => {
     cy.seedAndVisitDefault()
     .get('[data-cy=header-box]').should('exist')
@@ -87,6 +111,5 @@ context('inu-am-i', () => {
     .get('[data-cy=score-card]').first().click()
     .get('[data-cy=answer-card]').should('have.length', '3')
   })
-})
 
-  // cy.get("[data-cy=poster]").should("be.visible").should("have.length", 2)
+})

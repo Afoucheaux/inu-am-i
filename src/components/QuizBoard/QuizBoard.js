@@ -84,8 +84,8 @@ const QuizBoard = ( {name, number } ) => {
   return (
     <section className='page-styling' data-cy='page-styling'>
       <Header />
-        {error && <h1 data-cy='error-message'>There was an issue please refreash and try again.</h1>}
-        {!gameInfo.length && <h1 data-cy='loading'>Loading....</h1>}
+        {error && <h1 data-cy='error-message'>There was an issue, please refreash and try again.</h1>}
+        {!gameInfo.length && !error && <h1 data-cy='loading'>Loading....</h1>}
       <article className='directions' data-cy='directions'>
         <h2 className='inst' data-cy='inst'>{`${name} click on all the images of Shibas and then submit to see how you did!`}</h2>
         <Link className='get-results' data-cy='get-results' to={{pathname:`/user/${name}`, state:{gameInfo, allRounds}}}>submit</Link>
