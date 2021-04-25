@@ -88,7 +88,7 @@ context('inu-am-i', () => {
     cy.getToPlayerView()
     .get('[data-cy=header-box]').should('exist')
     .get('[data-cy=button-box]').should('exist')
-    .get('[data-cy=start-fresh]').contains('Start Fresh')
+    .get('[data-cy=quick]').contains('Quick Game')
     .get('[data-cy=left]').should('exist')
     .get('[data-cy=got]').contains('Got 67% Right!')
     .get('[data-cy=opps]').contains('Opps!')

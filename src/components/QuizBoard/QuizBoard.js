@@ -7,8 +7,8 @@ import QuizCard from '../QuizCard/QuizCard.js';
 import PropTypes from 'prop-types';
 
 const QuizBoard = ( {name, number } ) => {
+  
   const location = useLocation();
-  console.log(location)
   const [allRounds, setAllRounds] = useState([]);
   const [gameInfo, setGameInfo] = useState([]);
   const [error, setError] = useState('');

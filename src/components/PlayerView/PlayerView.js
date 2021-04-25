@@ -80,7 +80,7 @@ function PlayerView({ name }) {
     <main>
       <Header />
       <article className='button-box' data-cy='button-box'>
-        <Link className='start-fresh' data-cy='start-fresh' to={{pathname:`/game/${name}/5`, state:{allRounds}}}>Start Fresh</Link>
+        <Link className='quick' data-cy='quick' to={{pathname:`/game/${name}/5`, state:{allRounds}}}>Quick Game</Link>
       </article>
       <section className='page-layout'>
         <div className='left-styling-box' data-cy='left'>
