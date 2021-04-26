@@ -27,7 +27,7 @@ This project is a solo project that utilizes Create React App, to build an appli
 - Create a multi-page UX using Router
 
 - [Project Brief and Rubric](https://frontend.turing.edu/projects/module-3/niche-audience.html)
-
+- visit deployed site [here](https://inu-am-i.herokuapp.com/)
 #### Built With:
 
 - React
@@ -39,7 +39,7 @@ This project is a solo project that utilizes Create React App, to build an appli
 
 ## Set-up Instructions
 
-visit deployed site [here]()
+visit deployed site [here](https://inu-am-i.herokuapp.com/)
 
 1. Additionally you can clone down the repo [here](https://github.com/Afoucheaux/inu-am-i)
 2. Move into the inu-am-i directory in your terminal.
