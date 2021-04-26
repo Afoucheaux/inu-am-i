@@ -17,11 +17,12 @@
 
 
 ## About The Project
+  * Work on this project has stopped as of Apr 26 2021.
 
-This project utilizes Create React App to build an application which allows users to play a game that matches shiba inu's images from a mix of dogs and cats. Throughout the project,  goals was to demonstrate competency in the following technologies:
+This project is a solo project that utilizes Create React App, to build an application. The Application allows users to match Shiba Inu's images from a mix of dogs and cats. A user page and functionality to view past rounds. Throughout the project the goal was to demonstrate competency in the following technologies:
 
 - Architect an application structure using functional components and hooks.
-- Gain competency with React fundamentals
+- Show competency with React fundamentals
 - Continue working with React components & asynchronous JS using Cypress testing
 - Create a multi-page UX using Router
 
@@ -52,37 +53,38 @@ visit deployed site [here]()
 - Demonstrates competence in the following technologies.
 - React fundamentals including components, props, state, JSX, hooks.
 - E2E (end to end) testing using Cypress.
-- Utilize React Router.
-- Asynchronous JavaScript (api calls)
+- Utilize React Router
+- Asynchronous JavaScript
 
 ## Challenges
 
 1. Planning: intentionally planning an overall strategy before writing code. This included component structures and state if applicable
 2. Using Cypress testing, to implement E2E testing and throughly test all user flows including stubbing api calls.
+3. 6 day time frame.
+4. Maintaining multiple rounds in the player view.
 
 ## Wins
 
 1. Complete MVP user flows.
-2. Learned more about React Router and state.
-
+2. Gained more insight into React Router and state.
 
 ## Functionality
 
 
-#### Landing Page , Galleries Page, and Details Page
-![Site Use](https://media.giphy.com/media/t17g16S5Oc48f7jzt3/giphy.gif)
+#### Login , Game Page.
+![Site Use](https://media.giphy.com/media/Te1QItBni7ZVuubRvE/giphy.gif)
 
 
-#### Can choose and see favorites
-![Site Use](https://media.giphy.com/media/Vdmty5cR606UHXWbOc/giphy.gif)
+#### Player View and user flow.
+![Site Use](https://media.giphy.com/media/2JvC60dgJIzVBks5s9/giphy.gif)
 
 
-#### Can show contact info and Google Maps link
-![Site Use](https://media.giphy.com/media/I1dkNGUzMxbmS8fi5x/giphy.gif)
+#### Show of multiple round functionality.
+![Site Use](https://media.giphy.com/media/E8CJn6uKgiaQdq1Vbc/giphy.gif)
 
 
 ## Contributers
 
-* [Aaron Foucheaux](https://github.com/alexthompson207) - Application Co-creator
+* [Aaron Foucheaux](https://github.com/alexthompson207) - Application creator
 * [Leta](https://github.com/letakeane) - Project Manager
 * [Scott Ertmer](https://github.com/sertmer) - Project Manager
