@@ -1,9 +1,18 @@
 context('inu-am-i', () => {
 
-  it('Should have a loading message', () => {
+  it('Should have a loading message.', () => {
     cy.visit('http://localhost:3000')
     .get('[data-cy=start-button]').click()
     .get('[data-cy=loading]').contains('Loading....')
+  })
+
+  it('Should have a default error page for bad url paths that links you back to the start screen', () => {
+    cy.visit('http://localhost:3000/bad')
+    .get('[data-cy=header-box]').should('exist')
+    .get('[data-cy=error-layout]').should('exist')
+    .get('[data-cy=how]').contains('Opp How did we end up here')
+    .get('[data-cy=head-back]').click()
+    .get('[data-cy=form-page]').should('exist')
   })
 
   it("Should display an error message for a 500 server status", () => {
@@ -119,7 +128,5 @@ context('inu-am-i', () => {
     .get('[data-cy=start-button]').click()
     .get('[data-cy=start-fresh]').click()
   })
-
-
 
 })
