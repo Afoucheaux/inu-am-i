@@ -20,10 +20,16 @@
   object-fit: cover;
 }
 
-@media only screen and (max-width: 730px) {
-
-}
-
 @media only screen and (max-width: 576px) {
 
+  .card {
+    width: 22vw;
+    height: 22vh;
+    margin: .75em;
+  }
+
+  .answer-image {
+    width: 20vw;
+    height: 20vh;
+  }
 }

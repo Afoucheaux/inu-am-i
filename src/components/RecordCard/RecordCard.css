@@ -9,11 +9,10 @@
   font-size: 1.25em;
 }
 
-
-@media only screen and (max-width: 730px) {
-
-}
-
 @media only screen and (max-width: 576px) {
 
+  .score-card {
+    width: 25vw;
+    font-size: 1em;
+  }
 }

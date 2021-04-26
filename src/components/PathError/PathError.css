@@ -1,17 +1,17 @@
-.form-page {
+.layout {
   background-color: rgba(62, 69, 163);
   width: 100vw;
   height: 100vh;
   margin: 0;
 }
 
-.styling-box {
+.error-layout {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.start-info {
+.styling {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -25,33 +25,45 @@
 -2px -2px 5px 1px rgba(25, 30, 97, .4);
 }
 
-.start-button {
+.how {
   font-size: 2em;
+  color: rgba(247, 248, 250);
+}
+
+.head-back {
+  text-align: center;
+  border-radius: 20px;
+  font-size: 5em;
+  width: 70%;
+  height: 5vh;
   text-decoration: none;
   color: rgba(247, 248, 250);
 }
 
-.set-name {
-  text-align: center;
-  border-radius: 20px;
-  font-size: 2em;
-  width: 70%;
-  height: 5vh;
-}
+@media only screen and (max-width: 730px) {
 
-.set-num {
-  text-align: center;
-  border-radius: 20px;
-  font-size: 5em;
-  width: 40%;
-  height: 15vh;
+  .how {
+    margin: 2vh;
+    font-size: 1.5em;
+  }
+
+  .head-back {
+    margin: 2vh;
+    font-size: 2.5em;
+  }
+
 }
 
 @media only screen and (max-width: 576px) {
 
-  .start-info {
-    width: 90vw;
-    height: 60vh;
+  .how {
+    margin: 2vh;
+    font-size: 1em;
+  }
+
+  .head-back {
+    margin: 2vh;
+    font-size: 2em;
   }
 
 }

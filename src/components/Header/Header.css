@@ -23,7 +23,7 @@
 }
 
 .site-name {
-  margin: 0;
+  margin: .75vh;
   font-size: 2.5em;
   color: rgba(247, 248, 250);
 }
@@ -34,11 +34,47 @@
   color: rgba(201, 201, 201);
 }
 
+.start-fresh {
+  text-align: center;
+  align-self: center;
+  margin-left: 40%;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: rgba(247, 248, 250);
+}
 
 @media only screen and (max-width: 730px) {
+
+  .site-name {
+    margin: .5vh;
+    font-size: 1.75em;
+  }
+
+  .tag-line {
+    font-size: .7em;
+  }
+
+  .start-fresh {
+    margin-left: 20%;
+    font-size: 1.25em;
+  }
 
 }
 
 @media only screen and (max-width: 576px) {
+
+  .site-name {
+    margin: .5vh;
+    font-size: 1.5em;
+  }
+
+  .tag-line {
+    font-size: .5em;
+  }
+
+  .start-fresh {
+    margin-left: 0;
+    font-size: 1em;
+  }
 
 }
