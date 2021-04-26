@@ -34,6 +34,14 @@
   color: rgba(201, 201, 201);
 }
 
+.start-fresh {
+  text-align: center;
+  align-self: center;
+  margin-left: 40%;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: rgba(247, 248, 250);
+}
 
 @media only screen and (max-width: 730px) {
 
@@ -46,6 +54,11 @@
     font-size: .7em;
   }
 
+  .start-fresh {
+    margin-left: 20%;
+    font-size: 1.25em;
+  }
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -56,7 +69,12 @@
   }
 
   .tag-line {
-    font-size: .6em;
+    font-size: .5em;
+  }
+
+  .start-fresh {
+    margin-left: 0;
+    font-size: 1em;
   }
 
 }

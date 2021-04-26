@@ -103,13 +103,21 @@ context('inu-am-i', () => {
     cy.seedAndVisitInput()
     cy.getToPlayerView()
     .get('[data-cy=answer-card]').should('have.length', '3')
-    .get('[data-cy=start-fresh]').click()
+    .get('[data-cy=quick]').click()
     .get('[data-cy=card]').should('have.length', '15')
     .get('[data-cy=get-results]').click()
     .get('[data-cy=answer-card]').should('have.length', '15')
     .get('[data-cy=score-card]').should('have.length', '2')
     .get('[data-cy=score-card]').first().click()
     .get('[data-cy=answer-card]').should('have.length', '3')
+  })
+
+  it('Should be able to start fresh from any screen', () => {
+    cy.seedAndVisitInput()
+    cy.getToPlayerView()
+    .get('[data-cy=start-fresh]').click()
+    .get('[data-cy=start-button]').click()
+    .get('[data-cy=start-fresh]').click()
   })
 
 })
