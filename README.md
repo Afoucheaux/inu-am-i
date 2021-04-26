@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+## Contact  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555)](https://github.com/Afoucheaux) [![GitHub](https://img.shields.io/badge/GitHub-black.svg?&style=flat-square&logo=github&logoColor=white)](https://www.linkedin.com/in/aaron-foucheaux-891626207/) - Aaron Foucheaux
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [About the Project](#about-the-project)
+- [Built With](#built-with)
+- [Set-up Instructions](#set-up-instructions)
+- [Learning Goals](#learning-goals)
+- [Challenges](#challenges)
+- [Wins](#wins)
+- [Functionality](#functionality)
+- [Future Iterations](#future-iterations)
+- [Contributors](#contributors)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About The Project
+  * Work on this project has stopped as of Apr 26 2021.
 
-### `npm test`
+This project is a solo project that utilizes Create React App, to build an application. The Application allows users to match Shiba Inu's images from a mix of dogs and cats. A user page and functionality to view past rounds. Throughout the project the goal was to demonstrate competency in the following technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Architect an application structure using functional components and hooks.
+- Show competency with React fundamentals
+- Continue working with React components & asynchronous JS using Cypress testing
+- Create a multi-page UX using Router
 
-### `npm run build`
+- [Project Brief and Rubric](https://frontend.turing.edu/projects/module-3/niche-audience.html)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Built With:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- React Router
+- Javascript
+- HTML5
+- CSS
+- Cypress
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Set-up Instructions
 
-### `npm run eject`
+visit deployed site [here]()
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Additionally you can clone down the repo [here](https://github.com/Afoucheaux/inu-am-i)
+2. Move into the inu-am-i directory in your terminal.
+3. To see the code itself locally, run `<name of text editor> .`
+- Run `npm install`
+- Run `npm start`
+- visit http://localhost:3000/
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Learning Goals
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Demonstrates competence in the following technologies.
+- React fundamentals including components, props, state, JSX, hooks.
+- E2E (end to end) testing using Cypress.
+- Utilize React Router
+- Asynchronous JavaScript
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Challenges
 
-## Learn More
+1. Planning: intentionally planning an overall strategy before writing code. This included component structures and state if applicable
+2. Using Cypress testing, to implement E2E testing and throughly test all user flows including stubbing api calls.
+3. 6 day time frame.
+4. Maintaining multiple rounds in the player view.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Wins
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Complete MVP user flows.
+2. Gained more insight into React Router and state.
 
-### Code Splitting
+## Functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+#### Login , Game Page.
+![Site Use](https://media.giphy.com/media/Te1QItBni7ZVuubRvE/giphy.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+#### Player View and user flow.
+![Site Use](https://media.giphy.com/media/2JvC60dgJIzVBks5s9/giphy.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+#### Show of multiple round functionality.
+![Site Use](https://media.giphy.com/media/E8CJn6uKgiaQdq1Vbc/giphy.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Contributers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* [Aaron Foucheaux](https://github.com/alexthompson207) - Application creator
+* [Leta](https://github.com/letakeane) - Project Manager
+* [Scott Ertmer](https://github.com/sertmer) - Project Manager
