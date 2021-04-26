@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Header from '../Header/Header.js';
 import './PathError.css';
 
-
 function PathError () {
 
   return(

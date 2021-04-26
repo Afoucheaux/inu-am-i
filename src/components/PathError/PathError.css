@@ -40,6 +40,20 @@
   color: rgba(247, 248, 250);
 }
 
+@media only screen and (max-width: 730px) {
+
+  .how {
+    margin: 2vh;
+    font-size: 1.5em;
+  }
+
+  .head-back {
+    margin: 2vh;
+    font-size: 2.5em;
+  }
+
+}
+
 @media only screen and (max-width: 576px) {
 
   .how {
