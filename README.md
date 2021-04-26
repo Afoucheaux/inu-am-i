@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+## Contact  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555)](https://github.com/Afoucheaux) [![GitHub](https://img.shields.io/badge/GitHub-black.svg?&style=flat-square&logo=github&logoColor=white)](https://www.linkedin.com/in/aaron-foucheaux-891626207/) - Aaron Foucheaux
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [About the Project](#about-the-project)
+- [Built With](#built-with)
+- [Set-up Instructions](#set-up-instructions)
+- [Learning Goals](#learning-goals)
+- [Challenges](#challenges)
+- [Wins](#wins)
+- [Functionality](#functionality)
+- [Future Iterations](#future-iterations)
+- [Contributors](#contributors)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About The Project
 
-### `npm test`
+This project utilizes Create React App to build an application which allows users to play a game that matches shiba inu's images from a mix of dogs and cats. Throughout the project,  goals was to demonstrate competency in the following technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Architect an application structure using functional components and hooks.
+- Gain competency with React fundamentals
+- Continue working with React components & asynchronous JS using Cypress testing
+- Create a multi-page UX using Router
 
-### `npm run build`
+- [Project Brief and Rubric](https://frontend.turing.edu/projects/module-3/niche-audience.html)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Built With:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- React Router
+- Javascript
+- HTML5
+- CSS
+- Cypress
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Set-up Instructions
 
-### `npm run eject`
+visit deployed site [here]()
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Additionally you can clone down the repo [here](https://github.com/Afoucheaux/inu-am-i)
+2. Move into the inu-am-i directory in your terminal.
+3. To see the code itself locally, run `<name of text editor> .`
+- Run `npm install`
+- Run `npm start`
+- visit http://localhost:3000/
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Learning Goals
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Demonstrates competence in the following technologies.
+- React fundamentals including components, props, state, JSX, hooks.
+- E2E (end to end) testing using Cypress.
+- Utilize React Router.
+- Asynchronous JavaScript (api calls)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Challenges
 
-## Learn More
+1. Planning: intentionally planning an overall strategy before writing code. This included component structures and state if applicable
+2. Using Cypress testing, to implement E2E testing and throughly test all user flows including stubbing api calls.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Wins
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Complete MVP user flows.
+2. Learned more about React Router and state.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Functionality
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Landing Page , Galleries Page, and Details Page
+![Site Use](https://media.giphy.com/media/t17g16S5Oc48f7jzt3/giphy.gif)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Can choose and see favorites
+![Site Use](https://media.giphy.com/media/Vdmty5cR606UHXWbOc/giphy.gif)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Can show contact info and Google Maps link
+![Site Use](https://media.giphy.com/media/I1dkNGUzMxbmS8fi5x/giphy.gif)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributers
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* [Aaron Foucheaux](https://github.com/alexthompson207) - Application Co-creator
+* [Leta](https://github.com/letakeane) - Project Manager
+* [Scott Ertmer](https://github.com/sertmer) - Project Manager
