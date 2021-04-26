@@ -8,10 +8,10 @@ function PathError () {
   return(
     <section className='layout' data-cy='layout'>
       <Header />
-      <article className='error-layout'>
+      <article className='error-layout' data-cy='error-layout'>
         <div className='styling'>
           <>
-            <p className='how'>Opp How did we end up here?</p>
+            <p className='how' data-cy='how'>Opp How did we end up here?</p>
           </>
           <>
             <Link className='head-back' data-cy='head-back' to={'/'}>Head Back</Link>
