@@ -7,7 +7,7 @@ import QuizCard from '../QuizCard/QuizCard.js';
 import PropTypes from 'prop-types';
 
 const QuizBoard = ( {name, number } ) => {
-  
+
   const location = useLocation();
   const [allRounds, setAllRounds] = useState([]);
   const [gameInfo, setGameInfo] = useState([]);
@@ -17,6 +17,7 @@ const QuizBoard = ( {name, number } ) => {
     getGameImages(number)
     .then(data => buildGameState(data))
     .catch(err => handleError(err))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const QuizBoard = ( {name, number } ) => {
     } else {
       setAllRounds(location.state.allRounds)
     }
-  });
+  }, [location.state]);
 
   const handleError = (err) => {
     console.log(err)

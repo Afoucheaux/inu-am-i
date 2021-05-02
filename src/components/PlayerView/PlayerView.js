@@ -15,18 +15,18 @@ function PlayerView({ name }) {
 
   useEffect(() => {
     const round = location.state.gameInfo;
-    setDisplayRound(round)
-  }, [])
+    setDisplayRound(round);
+  }, [location.state.gameInfo]);
 
   useEffect(() => {
     const round = location.state.gameInfo;
     if(location.state.allRounds === undefined) {
-      setAllRounds([round])
+      setAllRounds([round]);
     } else {
-      const previousRounds = location.state.allRounds
-      setAllRounds([...previousRounds, round])
+      const previousRounds = location.state.allRounds;
+      setAllRounds([...previousRounds, round]);
     }
-  }, [])
+  }, [location.state.allRounds, location.state.gameInfo]);
 
   useEffect(() => {
     let correct = []
