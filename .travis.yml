@@ -12,4 +12,5 @@ script:
 
   addons:
     apt:
+      packages:
       - libgonf-2-4
