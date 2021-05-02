@@ -17,7 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "cypress run",
-    "test:cypress": "start-server-and-test start http://localhost8080 cypress",
+    "test:cypress": "start-server-and-test start http://localhost3000 cypress",
     "eject": "react-scripts eject",
     "cypress": "cypress open"
   },
