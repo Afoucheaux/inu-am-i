@@ -9,8 +9,3 @@ notifications:
 script:
   - npm test
   - npm run build
-
-  addons:
-    apt:
-      packages:
-      - libgonf-2-4
