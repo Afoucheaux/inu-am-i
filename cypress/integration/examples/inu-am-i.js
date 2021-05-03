@@ -100,6 +100,7 @@ context('inu-am-i', () => {
     .get('[data-cy=quick]').contains('Quick Game')
     .get('[data-cy=left]').should('exist')
     .get('[data-cy=opps]').contains('Opps!')
+    cy.wait(500)
     .get('[data-cy=answer-card]').should('exist')
     .get('[data-cy=right]').should('exist')
     .get('[data-cy=got]').contains('Got 67% Right!')
