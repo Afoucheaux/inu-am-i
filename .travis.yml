@@ -9,3 +9,5 @@ notifications:
 script:
   - npm test
   - npm run build
+
+install: travis_wait mvn install
