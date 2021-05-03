@@ -100,8 +100,9 @@ context('inu-am-i', () => {
     .get('[data-cy=quick]').contains('Quick Game')
     .get('[data-cy=left]').should('exist')
     .get('[data-cy=opps]').contains('Opps!')
-    .get('[data-cy=answer-card]').should('have.length', '3')
+    .get('[data-cy=answer-card]').should('exist')
     .get('[data-cy=right]').should('exist')
+    .get('[data-cy=got]').contains('Got 67% Right!')
     .get('[data-cy=player-rounds]').contains("Amie's Page")
     .get('[data-cy=score-card]').should('have.length', '1').contains('Round: 1')
     .get('[data-cy=click-to-view]').contains("Click to view round")
@@ -111,9 +112,11 @@ context('inu-am-i', () => {
     cy.seedAndVisitInput()
     cy.getToPlayerView()
     .get('[data-cy=answer-card]').should('have.length', '3')
+
     .get('[data-cy=quick]').click()
     .get('[data-cy=card]').should('have.length', '15')
     .get('[data-cy=get-results]').click()
+    .get('[data-cy=answer-card]').should('have.length', '15')
     .get('[data-cy=score-card]').should('have.length', '2')
     .get('[data-cy=score-card]').first().click()
     .get('[data-cy=answer-card]').should('have.length', '3')
@@ -128,5 +131,3 @@ context('inu-am-i', () => {
   })
 
 })
-  // .get('[data-cy=got]').contains('Got 67% Right!')
-  // .get('[data-cy=answer-card]').should('have.length', '15')
