@@ -111,12 +111,12 @@ context('inu-am-i', () => {
   it('Should be able to start a new defalt round from player view, then save and view multiple differnt rounds on the player view', () => {
     cy.seedAndVisitInput()
     cy.getToPlayerView()
-    .get('[data-cy=answer-card]').should('have.length', '3')
+    .get('.answer-card').should('have.length', '3')
 
     .get('[data-cy=quick]').click()
     .get('[data-cy=card]').should('have.length', '15')
     .get('[data-cy=get-results]').click()
-    .get('[data-cy=answer-card]').should('have.length', '15')
+    .get('.answer-card').should('have.length', '15')
     .get('[data-cy=score-card]').should('have.length', '2')
     .get('[data-cy=score-card]').first().click()
     .get('[data-cy=answer-card]').should('have.length', '3')
